@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>GoldenTulip</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Inter:wght@300;400;700;800&family=Roboto+Condensed&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="daterangepicker/daterangepicker.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/slick.css" />
+    <link rel="stylesheet" href="css/jquery.fancybox.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="bron">
+      <div class="container">
+        <div class="bron__top">
+          <nav class="header__nav-bron">
+            <a href="Golden.html" class="logo-bron logo__title-bron">
+              <i class="logo__icon-bron">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8.35355 1.14645C8.15829 0.951184 7.84171 0.951184 7.64645 1.14645L1.64645 7.14645C1.55268 7.24021 1.5 7.36739 1.5 7.5V14.5C1.5 14.7761 1.72386 15 2 15H6.5C6.77614 15 7 14.7761 7 14.5V10.5H9V14.5C9 14.7761 9.22386 15 9.5 15H14C14.2761 15 14.5 14.7761 14.5 14.5V7.5C14.5 7.36739 14.4473 7.24021 14.3536 7.14645L13 5.79289V2.5C13 2.22386 12.7761 2 12.5 2H11.5C11.2239 2 11 2.22386 11 2.5V3.79289L8.35355 1.14645ZM2.5 14V7.70711L8 2.20711L13.5 7.70711V14H10V10C10 9.72386 9.77614 9.5 9.5 9.5H6.5C6.22386 9.5 6 9.72386 6 10V14H2.5Z"
+                    fill="black"
+                  />
+                </svg>
+              </i>
+              <span>
+                Golden <br />
+                Tulip
+              </span>
+            </a>
+            <a href="tel:+17777777" class="header__phone-bron">+1 777 77 77</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <section class="booking">
+      <div class="container">
+        <div class="booking__inner">
+          <h1 class="booking__title">
+            Выберите даты заезда, выезда и другие подходящие Вам параметры
+          </h1>
+          <div class="booking__form--one">
+            <form action="" class="booking__form--first-date">
+              <h4 class="booking__form-title">Дата заезда</h4>
+              <input
+                id="start"
+                type="date"
+                data-date-inline-picker="true"
+                class="form-control"
+                name="date"
+                min=""
+              />
+              <i class="date-icon"
+                ><svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M11 6.5C11 6.22386 11.2239 6 11.5 6H12.5C12.7761 6 13 6.22386 13 6.5V7.5C13 7.77614 12.7761 8 12.5 8H11.5C11.2239 8 11 7.77614 11 7.5V6.5Z"
+                    fill="black"
+                  />
+                  <path
+                    d="M8 6.5C8 6.22386 8.22386 6 8.5 6H9.5C9.77614 6 10 6.22386 10 6.5V7.5C10 7.77614 9.77614 8 9.5 8H8.5C8.22386 8 8 7.77614 8 7.5V6.5Z"
+                    fill="black"
+                  />
+                  <path
+                    d="M3 9.5C3 9.22386 3.22386 9 3.5 9H4.5C4.77614 9 5 9.22386 5 9.5V10.5C5 10.7761 4.77614 11 4.5 11H3.5C3.22386 11 3 10.7761 3 10.5V9.5Z"
+                    fill="black"
+                  />
+                  <path
+                    d="M6 9.5C6 9.22386 6.22386 9 6.5 9H7.5C7.77614 9 8 9.22386 8 9.5V10.5C8 10.7761 7.77614 11 7.5 11H6.5C6.22386 11 6 10.7761 6 10.5V9.5Z"
+                    fill="black"
+                  />
+                  <path
+                    d="M3.5 0C3.77614 0 4 0.223858 4 0.5V1H12V0.5C12 0.223858 12.2239 0 12.5 0C12.7761 0 13 0.223858 13 0.5V1H14C15.1046 1 16 1.89543 16 3V14C16 15.1046 15.1046 16 14 16H2C0.895431 16 0 15.1046 0 14V3C0 1.89543 0.895431 1 2 1H3V0.5C3 0.223858 3.22386 0 3.5 0ZM1 4V14C1 14.5523 1.44772 15 2 15H14C14.5523 15 15 14.5523 15 14V4H1Z"
+                    fill="black"
+                  />
+                </svg>
+              </i>
+            </form>
+            <form action="" class="booking__form--first-date">
+              <h4 class="booking__form-title">Дата выезда</h4>
+              <input
+                id="start"
+                type="date"
+                data-date-inline-picker="true"
+                class="form-control"
+                name="date"
+                min=""
+              />
+              <i class="date-icon"
+                ><svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M11 6.5C11 6.22386 11.2239 6 11.5 6H12.5C12.7761 6 13 6.22386 13 6.5V7.5C13 7.77614 12.7761 8 12.5 8H11.5C11.2239 8 11 7.77614 11 7.5V6.5Z"
+                    fill="black"
+                  />
+                  <path
+                    d="M8 6.5C8 6.22386 8.22386 6 8.5 6H9.5C9.77614 6 10 6.22386 10 6.5V7.5C10 7.77614 9.77614 8 9.5 8H8.5C8.22386 8 8 7.77614 8 7.5V6.5Z"
+                    fill="black"
+                  />
+                  <path
+                    d="M3 9.5C3 9.22386 3.22386 9 3.5 9H4.5C4.77614 9 5 9.22386 5 9.5V10.5C5 10.7761 4.77614 11 4.5 11H3.5C3.22386 11 3 10.7761 3 10.5V9.5Z"
+                    fill="black"
+                  />
+                  <path
+                    d="M6 9.5C6 9.22386 6.22386 9 6.5 9H7.5C7.77614 9 8 9.22386 8 9.5V10.5C8 10.7761 7.77614 11 7.5 11H6.5C6.22386 11 6 10.7761 6 10.5V9.5Z"
+                    fill="black"
+                  />
+                  <path
+                    d="M3.5 0C3.77614 0 4 0.223858 4 0.5V1H12V0.5C12 0.223858 12.2239 0 12.5 0C12.7761 0 13 0.223858 13 0.5V1H14C15.1046 1 16 1.89543 16 3V14C16 15.1046 15.1046 16 14 16H2C0.895431 16 0 15.1046 0 14V3C0 1.89543 0.895431 1 2 1H3V0.5C3 0.223858 3.22386 0 3.5 0ZM1 4V14C1 14.5523 1.44772 15 2 15H14C14.5523 15 15 14.5523 15 14V4H1Z"
+                    fill="black"
+                  />
+                </svg>
+              </i>
+            </form>
+          </div>
+          <div class="booking__form booking__form--two">
+            <div class="booking__form-person">
+              <h4 class="booking__form-title">
+              Размещение в номере
+              </h4>
+              <select name="classif">
+              <option>1 взрослый</option>
+              <option value="person">2 взрослых</option>
+              <option value="person">3 взрослых</option>
+              <option value="person">4 взрослых</option>
+              <option value="person">5 взрослых</option>
+              <option value="person">6 взрослых</option>
+              <option value="person">7 взрослых</option>
+              <option value="person">8 взрослых</option>
+            </select>
+            </div>
+            <div class="child"> 
+              <h4 class="booking__form-title">
+              Добавить детей
+              </h4>
+              <input class="child__form" type="text" value="0" size="5"/>
+              <span class="plus">+</span>
+            </div>
+          </div>
+          <h4 class="service__form">
+            Включить услуги
+          </h4>
+          <div class=" booking__service-list">
+            <div class="booking__service-item">
+              <i class="booking__item-icon"
+                ><img src="images/service-4.png" alt="" class="service-icon"
+              /></i>
+              <p class="list__item-title">трансфер</p>
+              <div class="switch-btn"></div>
+            </div>
+            <div class="booking__service-item">  
+              <i class="booking__item-icon"
+                ><img src="images/service-2.png" alt="" class="service-icon"
+              /></i>
+              <p class="list__item-title">копия и распечатка</p>
+              <div class="switch-btn"></div>
+            </div>
+            <div class="booking__service-item">
+              <i class="booking__item-icon"
+                ><img src="images/service-6.png" alt="" class="service-icon"
+              /></i>
+              <p class="list__item-title">room service</p>
+              <div class="switch-btn"></div>
+            </div>
+            <div class=" booking__service-item">
+              <i class="booking__item-icon"
+                ><img src="images/service-3.png" alt="" class="service-icon"
+              /></i>
+              <p class="list__item-title">стирка и химчистка вещей</p>
+              <div class="switch-btn"></div>
+            </div>
+          </div>
+          <div class="promo">
+            <input type="checkbox" id="promo" name="promo" value="1"> 
+            <label for="">У меня есть промокод</label>
+            <div class="promocod">
+              <input class="booking__form-promo" type="text" placeholder="Промокод" />
+            </div>
+        </div>
+        <button class="booking__btn">
+        <a href="GoldenFreeAps.html">
+          НАЙТИ
+        </a>
+        </button>
+        </form>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__content footer__conten-logo">
+            <h2 class="footer__logo">
+              <a href="Golden.html" class="footer__link">GoldenTulip</a>
+            </h2>
+            <a href="#" class="footer__link">Официальные документы</a>
+          </div>
+          <div class="footer__content footer__content-communicate">
+            <div class="footer__contact">
+              <p class="communicate-title">Адрес:</p>
+              <a href="post:gost.goldtulip@gmail.com" class="footer__link"
+                >gost.goldtulip@gmail.com</a
+              >
+            </div>
+            <div class="footer__contact">
+              <p class="communicate-title">Телефон:</p>
+              <a href="tel:+17777777" class="footer__link">+1 777 77 77</a>
+            </div>
+            <ul class="footer__social">
+              <li class="social__item">
+                <a href="#" class="social__link"
+                  ><img src="images/inst.png" alt="" class="social__icon"
+                /></a>
+              </li>
+              <li class="social__item">
+                <a href="#" class="social__link"
+                  ><img src="images/facebook.png" alt="" class="social__icon"
+                /></a>
+              </li>
+
+              <li class="social__item">
+                <a href="#" class="social__link"
+                  ><img src="images/twitter.png" alt="" class="social__icon"
+                /></a>
+              </li>
+
+              <li class="social__item">
+                <a href="#" class="social__link"
+                  ><img src="images/telegram.png" alt="" class="social__icon"
+                /></a>
+              </li>
+            </ul>
+          </div>
+          <form action="" class="footer__content footer__form">
+            <h3 class="footer__form-title">Заявка</h3>
+            <input class="footer__form-input" type="text" placeholder="ИМЯ" />
+            <input
+              class="footer__form-input"
+              type="email"
+              placeholder="ПОЧТА"
+            />
+            <button class="footer__form-btn" type="submit">отправить</button>
+          </form>
+        </div>
+      </div>
+    </footer>
+    <script src="daterangepicker/moment.js"></script>
+    <script src="daterangepicker/daterangepicker.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
