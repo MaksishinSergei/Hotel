@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>GoldenTulip</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Inter:wght@300;400;700;800&family=Roboto+Condensed&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="daterangepicker/daterangepicker.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/slick.css" />
+    <link rel="stylesheet" href="css/jquery.fancybox.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__top">
+          <nav class="header__nav">
+            <a href="Golden.html" class="logo logo__title">
+              <i class="logo__icon">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8.35355 1.14645C8.15829 0.951184 7.84171 0.951184 7.64645 1.14645L1.64645 7.14645C1.55268 7.24021 1.5 7.36739 1.5 7.5V14.5C1.5 14.7761 1.72386 15 2 15H6.5C6.77614 15 7 14.7761 7 14.5V10.5H9V14.5C9 14.7761 9.22386 15 9.5 15H14C14.2761 15 14.5 14.7761 14.5 14.5V7.5C14.5 7.36739 14.4473 7.24021 14.3536 7.14645L13 5.79289V2.5C13 2.22386 12.7761 2 12.5 2H11.5C11.2239 2 11 2.22386 11 2.5V3.79289L8.35355 1.14645ZM2.5 14V7.70711L8 2.20711L13.5 7.70711V14H10V10C10 9.72386 9.77614 9.5 9.5 9.5H6.5C6.22386 9.5 6 9.72386 6 10V14H2.5Z"
+                    fill="black"
+                  />
+                </svg>
+              </i>
+              <span class="logo__title"> Golden<br />Tulip </span>
+            </a>
+            <div class="form">
+              <form action="" class="header__form-data">
+                <label for="pickup_time">Заезд:</label>
+                <input
+                  id="start"
+                  type="date"
+                  data-date-inline-picker="true"
+                  class="form-control"
+                  name="date"
+                  min=""
+                />
+                <i class="date-icon"
+                  ><svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M11 6.5C11 6.22386 11.2239 6 11.5 6H12.5C12.7761 6 13 6.22386 13 6.5V7.5C13 7.77614 12.7761 8 12.5 8H11.5C11.2239 8 11 7.77614 11 7.5V6.5Z"
+                      fill="black"
+                    />
+                    <path
+                      d="M8 6.5C8 6.22386 8.22386 6 8.5 6H9.5C9.77614 6 10 6.22386 10 6.5V7.5C10 7.77614 9.77614 8 9.5 8H8.5C8.22386 8 8 7.77614 8 7.5V6.5Z"
+                      fill="black"
+                    />
+                    <path
+                      d="M3 9.5C3 9.22386 3.22386 9 3.5 9H4.5C4.77614 9 5 9.22386 5 9.5V10.5C5 10.7761 4.77614 11 4.5 11H3.5C3.22386 11 3 10.7761 3 10.5V9.5Z"
+                      fill="black"
+                    />
+                    <path
+                      d="M6 9.5C6 9.22386 6.22386 9 6.5 9H7.5C7.77614 9 8 9.22386 8 9.5V10.5C8 10.7761 7.77614 11 7.5 11H6.5C6.22386 11 6 10.7761 6 10.5V9.5Z"
+                      fill="black"
+                    />
+                    <path
+                      d="M3.5 0C3.77614 0 4 0.223858 4 0.5V1H12V0.5C12 0.223858 12.2239 0 12.5 0C12.7761 0 13 0.223858 13 0.5V1H14C15.1046 1 16 1.89543 16 3V14C16 15.1046 15.1046 16 14 16H2C0.895431 16 0 15.1046 0 14V3C0 1.89543 0.895431 1 2 1H3V0.5C3 0.223858 3.22386 0 3.5 0ZM1 4V14C1 14.5523 1.44772 15 2 15H14C14.5523 15 15 14.5523 15 14V4H1Z"
+                      fill="black"
+                    />
+                  </svg>
+                </i>
+              </form>
+              <form action="" class="header__form-data">
+                <label for="pickup_time">Выезд:</label>
+                <input
+                  id="start"
+                  type="date"
+                  data-date-inline-picker="true"
+                  class="form-control"
+                  name="date"
+                  min=""
+                />
+                <i class="date-icon"
+                  ><svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M11 6.5C11 6.22386 11.2239 6 11.5 6H12.5C12.7761 6 13 6.22386 13 6.5V7.5C13 7.77614 12.7761 8 12.5 8H11.5C11.2239 8 11 7.77614 11 7.5V6.5Z"
+                      fill="black"
+                    />
+                    <path
+                      d="M8 6.5C8 6.22386 8.22386 6 8.5 6H9.5C9.77614 6 10 6.22386 10 6.5V7.5C10 7.77614 9.77614 8 9.5 8H8.5C8.22386 8 8 7.77614 8 7.5V6.5Z"
+                      fill="black"
+                    />
+                    <path
+                      d="M3 9.5C3 9.22386 3.22386 9 3.5 9H4.5C4.77614 9 5 9.22386 5 9.5V10.5C5 10.7761 4.77614 11 4.5 11H3.5C3.22386 11 3 10.7761 3 10.5V9.5Z"
+                      fill="black"
+                    />
+                    <path
+                      d="M6 9.5C6 9.22386 6.22386 9 6.5 9H7.5C7.77614 9 8 9.22386 8 9.5V10.5C8 10.7761 7.77614 11 7.5 11H6.5C6.22386 11 6 10.7761 6 10.5V9.5Z"
+                      fill="black"
+                    />
+                    <path
+                      d="M3.5 0C3.77614 0 4 0.223858 4 0.5V1H12V0.5C12 0.223858 12.2239 0 12.5 0C12.7761 0 13 0.223858 13 0.5V1H14C15.1046 1 16 1.89543 16 3V14C16 15.1046 15.1046 16 14 16H2C0.895431 16 0 15.1046 0 14V3C0 1.89543 0.895431 1 2 1H3V0.5C3 0.223858 3.22386 0 3.5 0ZM1 4V14C1 14.5523 1.44772 15 2 15H14C14.5523 15 15 14.5523 15 14V4H1Z"
+                      fill="black"
+                    />
+                  </svg>
+                </i>
+              </form>
+            </div>
+            <a href="GoldenBooking.html" class="header__btn-link">
+              <button class="header__btn icon__img-btn">
+                <span class="btn__title">забронировать</span>
+                <i>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.82836 0.721802C9.96097 0.721802 10.0881 0.77448 10.1819 0.868248L15.1317 5.818C15.3269 6.01326 15.3269 6.32984 15.1317 6.5251C14.6513 7.0055 14.0597 7.11349 13.6291 7.11349C13.4517 7.11349 13.2936 7.09548 13.1683 7.07423L10.0348 10.2078C10.0417 10.2357 10.0488 10.2652 10.0559 10.2962C10.1098 10.5298 10.1703 10.8554 10.1947 11.2206C10.2415 11.9231 10.163 12.908 9.47481 13.5962C9.27955 13.7914 8.96296 13.7914 8.7677 13.5962L5.93928 10.7677L2.7573 13.9497C2.56203 14.145 1.53835 14.8521 1.34308 14.6568C1.14782 14.4616 1.85493 13.4379 2.05019 13.2426L5.23217 10.0606L2.40374 7.23221C2.20848 7.03695 2.20848 6.72036 2.40374 6.5251C3.09191 5.83693 4.07677 5.7584 4.77929 5.80524C5.14448 5.82959 5.47016 5.8901 5.70368 5.94399C5.73473 5.95116 5.76426 5.95823 5.79215 5.96512L8.92568 2.83159C8.90444 2.70635 8.88642 2.54824 8.88642 2.37085C8.88642 1.94022 8.99442 1.34864 9.47481 0.868248C9.56858 0.77448 9.69575 0.721802 9.82836 0.721802ZM9.95004 2.83413L9.94927 2.83181L9.95004 2.83413ZM9.94927 2.83181L9.95004 2.83413C10.0086 3.01308 9.96161 3.20988 9.82836 3.34312L6.29283 6.87866C6.15903 7.01245 5.96118 7.05925 5.78164 6.9996L5.77962 6.99895L5.7665 6.9948C5.75402 6.99091 5.73426 6.9849 5.70796 6.97734C5.6553 6.96221 5.5769 6.94102 5.47882 6.91839C5.28144 6.87284 5.0105 6.82287 4.71277 6.80302C4.291 6.77491 3.87709 6.8108 3.53811 6.95237L9.04755 12.4618C9.18911 12.1228 9.22501 11.7089 9.19689 11.2871C9.17704 10.9894 9.12707 10.7185 9.08153 10.5211C9.05889 10.423 9.0377 10.3446 9.02257 10.2919C9.01501 10.2657 9.009 10.2459 9.00511 10.2334L9.00096 10.2203L9.00047 10.2188C8.94071 10.0392 8.9874 9.84094 9.12126 9.70708L12.6568 6.17155C12.7905 6.03781 12.9883 5.99099 13.1678 6.05053C13.1713 6.05161 13.1786 6.05373 13.1889 6.05653C13.2094 6.06214 13.2424 6.07045 13.2852 6.07901C13.3717 6.09631 13.4927 6.11349 13.6291 6.11349C13.7426 6.11349 13.8588 6.1019 13.972 6.07253L9.92738 2.02792C9.89802 2.14114 9.88642 2.25733 9.88642 2.37085C9.88642 2.50717 9.9036 2.6282 9.92091 2.71473C9.92946 2.7575 9.93777 2.79047 9.94338 2.81105C9.94618 2.82131 9.94819 2.82828 9.94927 2.83181Z"
+                      fill="none"
+                    />
+                  </svg>
+                </i>
+              </button>
+            </a>
+            <div class="phone">
+              <a href="tel:+17777777" class="header__phone">+1 777 77 77</a>
+            </div>
+          </nav>
+          </div>
+        <div class="header__inner">
+          <div class="hotel__column hotel__slider">
+            <img
+              src="images/head-slider-1.jpg"
+              alt=""
+              class="hotel__slider-item"
+            />
+            <img
+              src="images/head-slider-2.jpeg"
+              alt=""
+              class="hotel__slider-item"
+            />
+            <img
+              src="images/head-slider-3.jpeg"
+              alt=""
+              class="hotel__slider-item"
+            />
+            <img
+              src="images/head-slider-4.jpg"
+              alt=""
+              class="hotel__slider-item"
+            />
+          </div>
+          <div class="hotel__column hotel__column-text">
+            <h1 class="hotel__title">Golden Tulip</h1>
+            <h3 class="hotel__subtitle">Комфорт, современность, доступность</h3>
+            <p class="hotel__text">
+              Современный гостиница международной сети в самом центре города, с
+              пешей доступностью к основным историческим достопримечательностям,
+              бизнес-центрам, спортивными объектами и выездом на основные
+              городские магистрали. Атмосфера идеального комфорта в самом центре
+              города. Вы больше не делите жизнь на отдых и работу.
+            </p>
+            <p class="hotel__text">
+              Гостиница "Golden Tulip" объединяет все грани Вашего времени в
+              одном пространстве.
+            </p>
+            <h4 class="hotel__subtitle-btn">Businesstime. Playtime. Anytime</h4>
+            <a href="GoldenBooking.html" class="header__btn-link">
+              <button class="header__btn">
+                <span class="btn__title">забронировать</span>
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="info">
+      <div class="container">
+        <div class="info__inner">
+          <div class="info__column info__column-text">
+            <p class="info__text-title">
+              В нашей гостинице есть 8 типов комфортных номеров, которые вы
+              можете без труда забронировать:
+            </p>
+            <ul class="info__list">
+              <li class="info__list-item">
+                <i class="info__list-icon">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8 12C5.79086 12 4 10.2091 4 8C4 5.79086 5.79086 4 8 4C10.2091 4 12 5.79086 12 8C12 10.2091 10.2091 12 8 12ZM8 13C10.7614 13 13 10.7614 13 8C13 5.23858 10.7614 3 8 3C5.23858 3 3 5.23858 3 8C3 10.7614 5.23858 13 8 13Z"
+                      fill="black"
+                    />
+                    <path
+                      d="M10 8C10 9.10457 9.10457 10 8 10C6.89543 10 6 9.10457 6 8C6 6.89543 6.89543 6 8 6C9.10457 6 10 6.89543 10 8Z"
+                      fill="black"
+                    />
+                  </svg>
+                </i>
+                Эконом
+              </li>
+              <li class="info__list-item">
+                <i class="info__list-icon">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8 12C5.79086 12 4 10.2091 4 8C4 5.79086 5.79086 4 8 4C10.2091 4 12 5.79086 12 8C12 10.2091 10.2091 12 8 12ZM8 13C10.7614 13 13 10.7614 13 8C13 5.23858 10.7614 3 8 3C5.23858 3 3 5.23858 3 8C3 10.7614 5.23858 13 8 13Z"
+                      fill="black"
+                    />
+                    <path
+                      d="M10 8C10 9.10457 9.10457 10 8 10C6.89543 10 6 9.10457 6 8C6 6.89543 6.89543 6 8 6C9.10457 6 10 6.89543 10 8Z"
+                      fill="black"
+                    />
+                  </svg>
+                </i>
+                Стандарт
+              </li>
+              <li class="info__list-item">
+                <i class="info__list-icon">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8 12C5.79086 12 4 10.2091 4 8C4 5.79086 5.79086 4 8 4C10.2091 4 12 5.79086 12 8C12 10.2091 10.2091 12 8 12ZM8 13C10.7614 13 13 10.7614 13 8C13 5.23858 10.7614 3 8 3C5.23858 3 3 5.23858 3 8C3 10.7614 5.23858 13 8 13Z"
+                      fill="black"
+                    />
+                    <path
+                      d="M10 8C10 9.10457 9.10457 10 8 10C6.89543 10 6 9.10457 6 8C6 6.89543 6.89543 6 8 6C9.10457 6 10 6.89543 10 8Z"
+                      fill="black"
+                    />
+                  </svg>
+                </i>
+                Супериор
+              </li>
+              <li class="info__list-item">
+                <i class="info__list-icon">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8 12C5.79086 12 4 10.2091 4 8C4 5.79086 5.79086 4 8 4C10.2091 4 12 5.79086 12 8C12 10.2091 10.2091 12 8 12ZM8 13C10.7614 13 13 10.7614 13 8C13 5.23858 10.7614 3 8 3C5.23858 3 3 5.23858 3 8C3 10.7614 5.23858 13 8 13Z"
+                      fill="black"
+                    />
+                    <path
+                      d="M10 8C10 9.10457 9.10457 10 8 10C6.89543 10 6 9.10457 6 8C6 6.89543 6.89543 6 8 6C9.10457 6 10 6.89543 10 8Z"
+                      fill="black"
+                    />
+                  </svg>
+                </i>
+                Полулюкс
+              </li>
+              <li class="info__list-item">
+                <i class="info__list-icon">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8 12C5.79086 12 4 10.2091 4 8C4 5.79086 5.79086 4 8 4C10.2091 4 12 5.79086 12 8C12 10.2091 10.2091 12 8 12ZM8 13C10.7614 13 13 10.7614 13 8C13 5.23858 10.7614 3 8 3C5.23858 3 3 5.23858 3 8C3 10.7614 5.23858 13 8 13Z"
+                      fill="black"
+                    />
+                    <path
+                      d="M10 8C10 9.10457 9.10457 10 8 10C6.89543 10 6 9.10457 6 8C6 6.89543 6.89543 6 8 6C9.10457 6 10 6.89543 10 8Z"
+                      fill="black"
+                    />
+                  </svg>
+                </i>
+                Люкс
+              </li>
+              <li class="info__list-item">
+                <i class="info__list-icon">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8 12C5.79086 12 4 10.2091 4 8C4 5.79086 5.79086 4 8 4C10.2091 4 12 5.79086 12 8C12 10.2091 10.2091 12 8 12ZM8 13C10.7614 13 13 10.7614 13 8C13 5.23858 10.7614 3 8 3C5.23858 3 3 5.23858 3 8C3 10.7614 5.23858 13 8 13Z"
+                      fill="black"
+                    />
+                    <path
+                      d="M10 8C10 9.10457 9.10457 10 8 10C6.89543 10 6 9.10457 6 8C6 6.89543 6.89543 6 8 6C9.10457 6 10 6.89543 10 8Z"
+                      fill="black"
+                    />
+                  </svg>
+                </i>
+                Дуплекс
+              </li>
+              <li class="info__list-item">
+                <i class="info__list-icon">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8 12C5.79086 12 4 10.2091 4 8C4 5.79086 5.79086 4 8 4C10.2091 4 12 5.79086 12 8C12 10.2091 10.2091 12 8 12ZM8 13C10.7614 13 13 10.7614 13 8C13 5.23858 10.7614 3 8 3C5.23858 3 3 5.23858 3 8C3 10.7614 5.23858 13 8 13Z"
+                      fill="black"
+                    />
+                    <path
+                      d="M10 8C10 9.10457 9.10457 10 8 10C6.89543 10 6 9.10457 6 8C6 6.89543 6.89543 6 8 6C9.10457 6 10 6.89543 10 8Z"
+                      fill="black"
+                    />
+                  </svg>
+                </i>
+                Президентский
+              </li>
+              <li class="info__list-item">
+                <i class="info__list-icon">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8 12C5.79086 12 4 10.2091 4 8C4 5.79086 5.79086 4 8 4C10.2091 4 12 5.79086 12 8C12 10.2091 10.2091 12 8 12ZM8 13C10.7614 13 13 10.7614 13 8C13 5.23858 10.7614 3 8 3C5.23858 3 3 5.23858 3 8C3 10.7614 5.23858 13 8 13Z"
+                      fill="black"
+                    />
+                    <path
+                      d="M10 8C10 9.10457 9.10457 10 8 10C6.89543 10 6 9.10457 6 8C6 6.89543 6.89543 6 8 6C9.10457 6 10 6.89543 10 8Z"
+                      fill="black"
+                    />
+                  </svg>
+                </i>
+                Медовый месяц
+              </li>
+            </ul>
+            <a href="GoldenAps.html" class="info__btn-link">
+              <button class="info__btn">
+                <span class="btn__title">подробнее</span>
+              </button>
+            </a>
+          </div>
+          <div class="info__column info__column-img">
+            <img
+              src="images/info-img-1.jpg"
+              alt=""
+              class="info__img info__img-1"
+            />
+            <img
+              src="images/info-img-2.jpg"
+              alt=""
+              class="info__img info__img-2"
+            />
+          </div>
+        </div>
+        <div class="info__nomer">
+          <h3 class="info__nomer-title">Наши номера</h3>
+          <div class="info__slider">
+            <div class="info__slider-item">
+              <img
+                src="images/nomer-img-1.jpg"
+                alt=""
+                class="info__slider-img"
+              />
+              <p class="info__slider-text">Эконом</p>
+            </div>
+            <div class="info__slider-item">
+              <img
+                src="images/nomer-img-2.jpg"
+                alt=""
+                class="info__slider-img"
+              />
+              <p class="info__slider-text">Стандарт</p>
+            </div>
+            <div class="info__slider-item">
+              <img
+                src="images/nomer-img-3.png"
+                alt=""
+                class="info__slider-img"
+              />
+              <p class="info__slider-text">Супериор</p>
+            </div>
+            <div class="info__slider-item">
+              <img
+                src="images/nomer-img-4.png"
+                alt=""
+                class="info__slider-img"
+              />
+              <p class="info__slider-text">Полулюкс</p>
+            </div>
+            <div class="info__slider-item">
+              <img
+                src="images/nomer-img-5.png"
+                alt=""
+                class="info__slider-img"
+              />
+              <p class="info__slider-text">Люкс</p>
+            </div>
+            <div class="info__slider-item">
+              <img
+                src="images/nomer-img-6.png"
+                alt=""
+                class="info__slider-img"
+              />
+              <p class="info__slider-text">Дуплекс</p>
+            </div>
+            <div class="info__slider-item">
+              <img
+                src="images/nomer-img-7.jpg"
+                alt=""
+                class="info__slider-img"
+              />
+              <p class="info__slider-text">Президентский</p>
+            </div>
+            <div class="info__slider-item">
+              <img
+                src="images/nomer-img-8.jpg"
+                alt=""
+                class="info__slider-img"
+              />
+              <p class="info__slider-text">Медовый месяц</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="service">
+      <div class="container">
+        <div class="service__inner">
+          <div class="service__list">
+            <h3 class="service__title">Наши услуги</h3>
+            <div class="service__list-1">
+              <div class="service__list-item">
+                <i class="list__item-icon"
+                  ><img src="images/service-1.png" alt="" class="service-icon"
+                /></i>
+                <p class="list__item-title">уборка номера</p>
+              </div>
+              <div class="service__list-item">
+                <i class="list__item-icon"
+                  ><img src="images/service-2.png" alt="" class="service-icon"
+                /></i>
+                <p class="list__item-title">оформление документов</p>
+              </div>
+              <div class="service__list-item">
+                <i class="list__item-icon"
+                  ><img src="images/service-3.png" alt="" class="service-icon"
+                /></i>
+                <p class="list__item-title">смена постельного белья</p>
+              </div>
+              <div class="service__list-item">
+                <i class="list__item-icon"
+                  ><img src="images/service-4.png" alt="" class="service-icon"
+                /></i>
+                <p class="list__item-title">
+                  парковка на огражденной территории отеля
+                </p>
+              </div>
+              <div class="service__list-item">
+                <i class="list__item-icon"
+                  ><img src="images/service-5.png" alt="" class="service-icon"
+                /></i>
+                <p class="list__item-title">
+                  бесплатный WI-FI на всей территории гостиницы
+                </p>
+              </div>
+            </div>
+            <h3 class="service__title">Дополнительно</h3>
+            <div class="service__list-2">
+              <div class="service__list-item">
+                <i class="list__item-icon"
+                  ><img src="images/service-4.png" alt="" class="service-icon"
+                /></i>
+                <p class="list__item-title">трансфер</p>
+              </div>
+              <div class="service__list-item">
+                <i class="list__item-icon"
+                  ><img src="images/service-2.png" alt="" class="service-icon"
+                /></i>
+                <p class="list__item-title">копия и распечатка документов</p>
+              </div>
+              <div class="service__list-item">
+                <i class="list__item-icon"
+                  ><img src="images/service-6.png" alt="" class="service-icon"
+                /></i>
+                <p class="list__item-title">room service</p>
+              </div>
+              <div class="service__list-item">
+                <i class="list__item-icon"
+                  ><img src="images/service-3.png" alt="" class="service-icon"
+                /></i>
+                <p class="list__item-title">стирка и химчистка вещей</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="geoposition">
+      <div class="container">
+        <div class="geopos__inner">
+          <div class="geopos__map">
+            <h3 class="geopos__map-title">мы здесь</h3>
+            <div class="map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19982.695160048665!2d40.284181753081405!3d43.67141112938892!2m3!1f0!2f0!3f0!3m2!1i10
+24!2i768!4f13.1!3m3!1m2!1s0x40f67508d0881fcb%3A0xa6925c29909f98ec!2z0J7RgtC10LvRjCBHb2xkZW4gVHVsaXAg0KDQvtC30LAg0KXRg9GC0L7RgA!5e0!3m2!1sru!2sr
+u!4v1608064566215!5m2!1sru!2sru"
+                width="1000"
+                height="500"
+                frameborder="0"
+                style="border: 0"
+                allowfullscreen=""
+                aria-hidden="false"
+                tabindex="0"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__content footer__conten-logo">
+            <h2 class="footer__logo">
+              <a href="Golden.html" class="footer__link">GoldenTulip</a>
+            </h2>
+            <a href="#" class="footer__link">Официальные документы</a>
+          </div>
+          <div class="footer__content footer__content-communicate">
+            <div class="footer__contact">
+              <p class="communicate-title">Адрес:</p>
+              <a href="post:gost.goldtulip@gmail.com" class="footer__link"
+                >gost.goldtulip@gmail.com</a
+              >
+            </div>
+            <div class="footer__contact">
+              <p class="communicate-title">Телефон:</p>
+              <a href="tel:+17777777" class="footer__link">+1 777 77 77</a>
+            </div>
+            <ul class="footer__social">
+              <li class="social__item">
+                <a href="#" class="social__link"
+                  ><img src="images/inst.png" alt="" class="social__icon"
+                /></a>
+              </li>
+              <li class="social__item">
+                <a href="#" class="social__link"
+                  ><img src="images/facebook.png" alt="" class="social__icon"
+                /></a>
+              </li>
+
+              <li class="social__item">
+                <a href="#" class="social__link"
+                  ><img src="images/twitter.png" alt="" class="social__icon"
+                /></a>
+              </li>
+
+              <li class="social__item">
+                <a href="#" class="social__link"
+                  ><img src="images/telegram.png" alt="" class="social__icon"
+                /></a>
+              </li>
+            </ul>
+          </div>
+          <form action="" class="footer__content footer__form">
+            <h3 class="footer__form-title">Заявка</h3>
+            <input class="footer__form-input" type="text" placeholder="ИМЯ" />
+            <input
+              class="footer__form-input"
+              type="email"
+              placeholder="ПОЧТА"
+            />
+            <button class="footer__form-btn" type="submit">отправить</button>
+          </form>
+        </div>
+      </div>
+    </footer>
+    <script src="daterangepicker/moment.js"></script>
+    <script src="daterangepicker/daterangepicker.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
